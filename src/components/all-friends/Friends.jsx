@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import FriendList from "./FriendList";
+import Loading from "../loading/Loading";
 
 const Friends = () => {
     const allFriends = fetch("./public/data.json").then((response) => {
@@ -11,7 +12,9 @@ const Friends = () => {
                 <p className="geist font-semibold text-[24px] leading-[auto] tracking-[0%] text-[#1F2937]">Your Friends</p>
             </div>
             <div>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<div className="flex justify-center items-center h-50">
+                    <Loading></Loading>
+                </div>}>
                     <div>
                         <FriendList allFriends={allFriends}></FriendList>
                     </div>
