@@ -8,6 +8,7 @@ import Timeline from './pages/timeline/Timeline.jsx'
 import Stats from './pages/stats/Stats.jsx'
 import ContextProvider from './components/context/ContextProvider.jsx'
 import Details from './components/all-friends/Details.jsx'
+import NotFound from './components/not-found/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/friend/:id",
         Component: Details
+      },
+      {
+        path: "*",
+        Component: NotFound
       }
     ]
   }
