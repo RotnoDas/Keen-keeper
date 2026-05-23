@@ -8,6 +8,7 @@ import Loading from "../loading/Loading";
 import call from "../../assets/images/call.png";
 import text from "../../assets/images/text.png";
 import video from "../../assets/images/video.png";
+import { toast, Zoom } from "react-toastify";
 
 const SingleFriend = ({ friend }) => {
     const { loading, setLoading, timelineData, setTimelineData } = useContext(context);
@@ -34,6 +35,17 @@ const SingleFriend = ({ friend }) => {
                 year: "numeric"
             })
         }
+        toast.success(`Call with ${friend.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
+            });
         if(timelineData.length === 0) {
             setTimelineData([phoneData]);
         } else {
@@ -51,6 +63,17 @@ const SingleFriend = ({ friend }) => {
                 year: "numeric"
             })
         }
+        toast.success(`Text with ${friend.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
+            });
         if(timelineData.length === 0) {
             setTimelineData([textData]);
         } else {
@@ -68,6 +91,17 @@ const SingleFriend = ({ friend }) => {
                 year: "numeric"
             })
         }
+        toast.success(`Video with ${friend.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
+            });
         if(timelineData.length === 0) {
             setTimelineData([videoData]);
         } else {
