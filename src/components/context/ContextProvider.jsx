@@ -3,6 +3,8 @@ import { context } from "./ContextCreate";
 
 const ContextProvider = ({ children }) => {
     const [friendsData, setFriendsData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [timelineData, setTimelineData] = useState([]);
     useEffect(() => {
         const fetchData = async() => {
             try {
@@ -16,7 +18,7 @@ const ContextProvider = ({ children }) => {
         fetchData();
     }, []);
     return (
-        <context.Provider value={friendsData}>
+        <context.Provider value={{friendsData, loading, setLoading, timelineData, setTimelineData}}>
             {children}
         </context.Provider>
     );
