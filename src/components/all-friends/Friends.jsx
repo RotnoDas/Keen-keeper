@@ -3,9 +3,9 @@ import FriendList from "./FriendList";
 import Loading from "../loading/Loading";
 
 const Friends = () => {
-    const allFriends = fetch("./public/data.json").then((response) => {
+    const allFriends = fetch("/data.json").then((response) => {
         return response.json();
-    });
+    })
     return (
         <div className="max-sm:px-1 sm:px-2 md:px-5 lg:px-6 xl:px-61.25 bg-[#F8FAFC]">
             <div>

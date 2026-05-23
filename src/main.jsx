@@ -6,6 +6,8 @@ import RootLayout from './layout/root-layout/RootLayout.jsx'
 import Homepage from './pages/homepage/Homepage.jsx'
 import Timeline from './pages/timeline/Timeline.jsx'
 import Stats from './pages/stats/Stats.jsx'
+import ContextProvider from './components/context/ContextProvider.jsx'
+import Details from './components/all-friends/Details.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/stats",
         Component: Stats
+      },
+      {
+        path: "/friend/:id",
+        Component: Details
       }
     ]
   }
@@ -30,6 +36,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </ContextProvider>
   </StrictMode>,
 )
