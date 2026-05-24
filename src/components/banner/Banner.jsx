@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { FaPlus } from "react-icons/fa";
+import { context } from "../context/ContextCreate";
 
 const Banner = () => {
+    const { friendsData } = useContext(context);
     return (
         <div className="max-sm:px-1 sm:px-2 md:px-3 lg:px-5 xl:px-61.25 max-sm:py-3 sm:py-5 md:py-7 lg:py-20 bg-[#F8FAFC] space-y-10">
             <div className="flex flex-col justify-center items-center w-full">
@@ -9,7 +12,7 @@ const Banner = () => {
                 <button className="px-4 py-3 rounded-sm bg-[#244D3F] flex items-center gap-1 geist font-semibold text-[16px] leading-[auto] tracking-[0%] text-[#FFFFFF] mb-8"><FaPlus />Add a Friend</button>
                 <div className="flex max-sm:flex-col sm:flex-row md:flex-row lg:flex-row items-center justify-between gap-6 w-full">
                     <div className="p-8 flex flex-col items-center justify-center rounded-lg bg-[#FFFFFF] border border-[#FFFFFF] w-1/4 shadow-md max-sm:w-full sm:w-1/4 md:w-1/4 lg:w-1/4 h-full">
-                        <h1 className="geist font-semibold text-[32px] leading-[auto] tracking-[0%] text-[#244D3F]">10</h1>
+                        <h1 className="geist font-semibold text-[32px] leading-[auto] tracking-[0%] text-[#244D3F]">{friendsData.length}</h1>
                         <p className="geist font-normal text-[16px] leading-[auto] tracking-[0%] text-[#64748B]">Total Friends</p>
                     </div>
                     <div className="p-8 flex flex-col items-center justify-center rounded-lg bg-[#FFFFFF] border border-[#FFFFFF] w-1/4 shadow-md max-sm:w-full sm:w-1/4 md:w-1/4 lg:w-1/4 h-full">

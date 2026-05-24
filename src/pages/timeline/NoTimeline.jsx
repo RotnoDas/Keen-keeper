@@ -1,6 +1,6 @@
 const NoTimeline = () => {
     return (
-        <div className="flex min-h-[60vh] w-full items-center justify-center bg-gray-50/50 p-6">
+        <div className="flex min-h-screen w-full items-center justify-center bg-gray-50/50 p-6">
             <div className="w-full max-w-md rounded-2xl bg-white p-10 text-center shadow-sm ring-1 ring-gray-100">
                 
                 {/* Inline SVG Icon - No libraries needed */}

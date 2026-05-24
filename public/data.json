@@ -118,5 +118,29 @@
         "bio": "Artist friend who loves painting and design.",
         "goal": 7,
         "next_due_date": "2026-05-27"
+    },
+    {
+        "id": 11,
+        "name": "William Walker",
+        "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "email": "william@example.com",
+        "days_since_contact": 16,
+        "status": "overdue",
+        "tags": ["fitness", "trainer"],
+        "bio": "Fitness trainer who helps clients reach their goals.",
+        "goal": 12,
+        "next_due_date": "2026-05-22"
+    },
+    {
+        "id": 12,
+        "name": "Mia Harris",
+        "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "email": "mia@example.com",
+        "days_since_contact": 4,
+        "status": "on-track",
+        "tags": ["tech", "developer"],
+        "bio": "Tech enthusiast who loves coding and problem-solving.",
+        "goal": 9,
+        "next_due_date": "2026-05-26"
     }
 ]
