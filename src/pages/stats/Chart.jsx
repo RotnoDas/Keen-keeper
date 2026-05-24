@@ -47,8 +47,8 @@ const Chart = () => {
                 animationDuration={1000}
                 animationEasing="ease-in-out"
             />
-            <Tooltip></Tooltip>
-            <Legend></Legend>
+            <Tooltip />
+            <Legend wrapperStyle={{ marginTop: 16 }} />
             <RechartsDevtools />
         </PieChart>
         

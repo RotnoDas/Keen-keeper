@@ -7,7 +7,7 @@ const Details = () => {
     const { friendsData } = useContext(context);
     const id = Number(useParams().id);
     return (
-        <div className="max-sm:px-1 sm:px-2 md:px-3 lg:px-5 xl:px-61.25 py-20 bg-[#F8FAFC]">
+        <div className="max-sm:px-1 sm:px-2 md:px-3 lg:px-5 xl:px-61.25 py-20 bg-[#F8FAFC] min-h-screen">
             {
                 friendsData.map((friend) => {
                     if(friend.id === id) {
